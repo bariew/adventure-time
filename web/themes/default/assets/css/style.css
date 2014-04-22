@@ -1,0 +1,154 @@
+.yiiTab ul.tabs a, .yiiTab ul.tabs, .yiiTab div.view{
+    border-color: #ffffff;
+}
+.ui-widget-content a {
+    color: #0044AA;
+    text-decoration: underline;
+}
+.ajaxWrapper {
+    background-color: #FFFFFF;
+    border-left: 2px solid #DDDDDD;
+    padding: 0 0 0 30px;
+}
+
+.dragLine {
+    background-color: #AAAAAA;
+    cursor: ew-resize;
+    float: left;
+    height: 1000px;
+    margin-left: -32px;
+    width: 2px;
+}
+
+.navbar .brand{
+    padding: 4px 20px;
+}
+select.hide-input{
+    display:none;
+}
+
+/* TREE CONTEXTMENU */
+
+.vakata-context.jstree-contextmenu li {
+    display: inline-block;
+}
+.vakata-context.jstree-contextmenu li a {
+    padding: 0 0 0 1.5em;
+}
+.vakata-context.jstree-contextmenu li a ins {
+    display:none;
+}
+.vakata-context.jstree-contextmenu li a span {
+    display:none;
+}
+/* PRINT */
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .ajaxContent, .ajaxContent * {
+        visibility: visible;
+    }
+    .ajaxContent {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
+/* Contents */
+    /* toc */
+    ul.toc {
+        max-width: 40em;
+        padding: 0;
+        overflow-x: hidden;
+        list-style: none;
+        margin-left: 10px;
+    }
+    ul.toc a {
+        color: #333333;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    ul.toc li:before {
+        float: left;
+        width: 0;
+        white-space: nowrap;
+        content:
+            ". . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . "
+    }
+    ul.toc span:first-child {
+        padding-right: 0.33em;
+        background: white
+    }
+    ul.toc span + span {
+        float: right;
+        padding-left: 0.33em;
+        background: white
+    }
+
+    /* content */
+    h1{
+        text-align:center;
+    }
+
+
+/* MAP */
+
+.gmap img { 
+  max-width: none!important;
+}
+.olMap{
+    height:500px;
+}
+    
+/* SLIDER */
+
+.ui-slider-handle {
+    font-weight: bold;
+    text-align: center;
+}
+    
+/* COLORBOX */
+
+#colorbox, #cboxWrapper {
+    padding: 20px ;
+    margin: 0;
+}
+
+#colorbox form{
+    margin:0;
+}
+
+#colorbox form h2{
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+
+/* MENU */
+.expanded.dropdown-menu {
+    background-color: inherit;
+    border: 0 none;
+    border-radius: 0 0 0 0;
+    box-shadow: 0 0 0 0;
+    display: block;
+    position: static !important;
+}
+
+/******************* ALTERAPI ******************/
+
+/* LOG */
+.value.color-delete {
+    color: #FF0000;
+}
+.value.color-transform {
+    color: #0000FF;
+}
+.color-green {
+    color: #008000;
+}

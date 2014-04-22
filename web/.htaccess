@@ -1,0 +1,40 @@
+php_value upload_max_filesize 100M
+php_value post_max_size 100M
+
+AddDefaultCharset UTF-8
+AddType text/x-component .htc
+
+AddType application/javascript         js
+
+AddType audio/ogg                      oga ogg
+AddType audio/mp4                      m4a
+
+AddType video/ogg                      ogv
+AddType video/mp4                      mp4 m4v
+AddType video/webm                     webm
+
+AddType     image/svg+xml              svg svgz 
+AddEncoding gzip                       svgz
+                                                                  
+AddType application/vnd.ms-fontobject  eot
+AddType application/x-font-ttf    ttf ttc
+AddType font/opentype                  otf
+AddType application/x-font-woff        woff
+                                 
+AddType image/x-icon                   ico
+AddType image/webp                     webp
+AddType text/cache-manifest            appcache manifest
+AddType text/x-component               htc
+AddType application/x-chrome-extension crx
+AddType application/x-xpinstall        xpi
+AddType application/octet-stream       safariextz
+AddType text/x-vcard                   vcf
+
+ExpiresActive On
+ExpiresDefault "access plus 30 days"
+
+RewriteEngine On
+
+RewriteCond $1 !^(index\.php|translator\.php|forum|assets|images|css|files|themes|requirements|js|layout|manager|favicon.ico|test.php)
+RewriteRule ^(.*)$ /index.php/$1 [L]
+

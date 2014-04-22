@@ -1,0 +1,7 @@
+nbproject
+.idea
+
+syntax: regexp
+web/files/(?!\.hgsave).*
+web/assets/(?!\.hgsave).*
+web/protected/runtime/(?!\.hgsave).*

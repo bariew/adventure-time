@@ -1,0 +1,1 @@
+<?php $this->renderPartial('../userItem/_form', compact('model')); ?>

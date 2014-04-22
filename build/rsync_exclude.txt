@@ -1,0 +1,6 @@
+/*/.hg
+/**/.git
+/files/*
+/assets/*
+/protected/runtime/*
+_db.php

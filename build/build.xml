@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<project name="adventure-time" default="amazon">
+    <target name="amazon">
+        <property name="execoutput" value="" />
+        <!-- SYNCRONIZATION -->
+        <exec command="rsync
+            --recursive
+            --links
+            --compress --compress-level=9
+            --delete-after
+            --exclude-from=${project.basedir}/rsync_exclude.txt
+            ${project.basedir}/../web/
+             ubuntu@54.213.52.189:/var/www/adventure-time/web"
+        outputproperty="execoutput" />
+        <!-- MIGRATIONS -->
+        <exec command="ssh -i ~/.ssh/amazon.pem ubuntu@54.213.52.189 php /var/www/adventure-time/web/protected/yiic.php migrate --interactive=0"
+                outputproperty="execoutput" />
+        <echo>BUILD SUCCESS!</echo>
+    </target>
+</project>
